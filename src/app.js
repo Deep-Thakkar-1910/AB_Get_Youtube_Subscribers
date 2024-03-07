@@ -16,7 +16,7 @@ app.get("/subscribers", async (req, res) => {
 });
 
 // Route to get all the subscribers but only their names and their subscribed channels
-app.get("/subscribers/name", async (req, res) => {
+app.get("/subscribers/names", async (req, res) => {
   try {
     const subscribers = await subscriberModel
       .find({})
