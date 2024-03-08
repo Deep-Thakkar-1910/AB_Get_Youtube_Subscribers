@@ -31,7 +31,7 @@ app.use(express.urlencoded({ extended: true }));
  *          id: 65e9e1236abe03d47f6ee051
  *          name: John Doe
  *          subscribedChannel: freeCodeCamp.org
- *          subscriptionDate: 2024-03-07T15:45:39.895Z
+ *          subscribedDate: 2024-03-07T15:45:39.895Z
  */
 
 // for adding a tag of Subscribers
