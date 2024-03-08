@@ -2,7 +2,7 @@
 
 This is a simple Node.js backend application built with Express.js that provides API endpoints for getting subscriber information.
 
-Try it out Yourself ![HERE]("https://ab-get-youtube-subscribers.onrender.com")
+Try it out Yourself [HERE]("https://ab-get-youtube-subscribers.onrender.com")
 
 ## Table of Contents
 
@@ -10,7 +10,7 @@ Try it out Yourself ![HERE]("https://ab-get-youtube-subscribers.onrender.com")
 
 - [Introduction](#get-yotube-subscribers)
 - [Features](#features)
-- [Getting Started](#getting-started)
+- [Prerequisites](#prerequisites)
 - [Installation and setup](#installation)
 - [API Endpoints](#api-endpoints)
 - [License](#license)
