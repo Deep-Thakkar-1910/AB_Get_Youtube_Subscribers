@@ -4,6 +4,7 @@ const app = require("./app.js");
 const mongoose = require("mongoose");
 const swaggerUI = require("swagger-ui-express");
 const swaggerJsDoc = require("swagger-jsdoc");
+const cors = require("cors");
 const port = process.env.PORT || 3000;
 
 // options for swagger ui docs
@@ -17,10 +18,10 @@ const options = {
     },
     servers: [
       {
-        url: "http://localhost:3000/",
+        url: "https://ab-get-youtube-subscribers.onrender.com",
       },
       {
-        url: "https://ab-get-youtube-subscribers.onrender.com",
+        url: "http://localhost:3000/",
       },
     ],
   },
@@ -29,12 +30,16 @@ const options = {
 
 const specs = swaggerJsDoc(options);
 app.use("/", swaggerUI.serve, swaggerUI.setup(specs));
+
 // to configure the env variable path
 dotenv.config({ path: "./.env" });
 
 // Parse JSON bodies (as sent by API clients)
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+// enabling cors to get over CORS Restriction
+app.use(cors());
 
 // Connect to DATABASE
 const DATABASE_URL = process.env.DATABASE_URL;
