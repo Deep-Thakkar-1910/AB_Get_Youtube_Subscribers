@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: true }));
  *            description: Person name
  *          subscribedChannel:
  *            type: string
- *            description: Channels Perso has Subscribed to
+ *            description: Channels Person has Subscribed to
  *          subscribedDate:
  *            type: string
  *            description: Date the channel was subscribed on
