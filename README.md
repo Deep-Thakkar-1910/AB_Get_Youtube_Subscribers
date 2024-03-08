@@ -2,7 +2,7 @@
 
 This is a simple Node.js backend application built with Express.js that provides API endpoints for getting subscriber information.
 
-Try it out Yourself [HERE]("https://ab-get-youtube-subscribers.onrender.com")
+Access the docs for this api [HERE](https://ab-get-youtube-subscribers.onrender.com)
 
 ## Table of Contents
 
