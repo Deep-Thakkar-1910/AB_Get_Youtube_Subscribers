@@ -2,8 +2,33 @@ const dotenv = require("dotenv");
 const express = require("express");
 const app = require("./app.js");
 const mongoose = require("mongoose");
+const swaggerUI = require("swagger-ui-express");
+const swaggerJsDoc = require("swagger-jsdoc");
 const port = process.env.PORT || 3000;
 
+// options for swagger ui docs
+const options = {
+  definition: {
+    openapi: "3.0.0",
+    info: {
+      title: "Get Yotube Subcribers",
+      version: "1.0.0",
+      description: "A Minimal Express API To Get Youtube Subscribers",
+    },
+    servers: [
+      {
+        url: "http://localhost:3000/",
+      },
+      {
+        url: "https://ab-get-youtube-subscribers.onrender.com",
+      },
+    ],
+  },
+  apis: ["./src/app.js"],
+};
+
+const specs = swaggerJsDoc(options);
+app.use("/", swaggerUI.serve, swaggerUI.setup(specs));
 // to configure the env variable path
 dotenv.config({ path: "./.env" });
 
